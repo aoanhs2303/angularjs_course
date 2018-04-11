@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<title> Example </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app ng-init="giatri='aa'" ng-init="show=true">
+	<input type="text" ng-model="hellow">
+	{{ hellow }}
+
+	<select name="" id="" ng-model="mau">
+		<option value="xanh">Xanh</option>
+		<option value="do">Đỏ</option>
+		<option value="vang">Vàng</option>
+	</select>
+	<h2>Chọn: {{ mau }}</h2>
+
+	<h3>{{ giatri }}</h3>
+
+	<button class="btn btn-success" ng-click="show = !show">Click ng-show</button>
+	{{ show }}
+	<div class="card" ng-show="show">
+		<img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
+		<div class="card-block">
+			<h4 class="card-title">Card title</h4>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			<a href="#" class="btn btn-primary">Button</a>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="vendor/bootstrap.js"></script>
+<script type="text/javascript" src="vendor/angular.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>

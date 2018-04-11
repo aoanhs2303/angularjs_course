@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"  >
+	<!--
+	IE8 support, see AngularJS Internet Explorer Compatibility http://docs.angularjs.org/guide/ie
+	For Firefox 3.6, you will also need to include jQuery and ECMAScript 5 shim
+-->
+	<!--[if lt IE 9]>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+	<script>
+	  document.createElement('ui-select');
+	  document.createElement('ui-select-match');
+	  document.createElement('ui-select-choices');
+	</script>
+<![endif]-->
+<head>
+	<title> Document  </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 	
+	<link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="vendor/angular-material.min.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+	<link rel="stylesheet" href="1.css">
+	<link rel="stylesheet" href="vendor/select.css">
+</head>
+<body ng-app="myApp" ng-controller="MyController as ctrl">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 push-sm-3">
+				<h3>Array of strings</h3>
+				<ui-select multiple ng-model="ctrl.multipleDemo.danhmuc" theme="bootstrap" ng-disabled="ctrl.disabled" close-on-select="false" style="width: 300px;" title="Choose a color">
+					<ui-select-match placeholder="Select colors...">{{$item.tendanhmuc}}</ui-select-match>
+					<ui-select-choices repeat="dm in ctrl.availableColors | filter:$select.search">
+						{{dm.tendanhmuc}}
+					</ui-select-choices>
+				</ui-select>
+				<p>Selected: {{ctrl.multipleDemo.danhmuc}}</p>
+				<hr>
+				<button class="btn btn-outline-danger" ng-click="guidulieu(ctrl.multipleDemo.danhmuc)">Send</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>  
+	<script type="text/javascript" src="vendor/angular-1.5.min.js"></script>  
+	<script type="text/javascript" src="vendor/angular-animate.min.js"></script>
+	<script type="text/javascript" src="vendor/angular-sanitize.js"></script>
+	<script type="text/javascript" src="vendor/angular-aria.min.js"></script>
+	<script type="text/javascript" src="vendor/angular-messages.min.js"></script>
+	<script type="text/javascript" src="vendor/angular-material.min.js"></script>  
+	<script type="text/javascript" src="1.js"></script>
+	<script type="text/javascript" src="vendor/select.js"></script>
+
+</body>
+</html>

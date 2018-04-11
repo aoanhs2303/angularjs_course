@@ -1,0 +1,14 @@
+[
+	{
+		"nguoigui":"AAA",
+		"noidung": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem debitis dolorum exercitationem nesciunt quisquam eos vero quod eveniet reiciendis similique amet delectus, placeat dolorem recusandae quidem? Unde delectus, reprehenderit culpa."
+	},
+	{
+		"nguoigui":"BBB",
+		"noidung": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem debitis dolorum exercitationem nesciunt quisquam eos vero quod eveniet reiciendis similique amet delectus, placeat dolorem recusandae quidem? Unde delectus, reprehenderit culpa."
+	},
+	{
+		"nguoigui":"CCC",
+		"noidung": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem debitis dolorum exercitationem nesciunt quisquam eos vero quod eveniet reiciendis similique amet delectus, placeat dolorem recusandae quidem? Unde delectus, reprehenderit culpa."
+	}
+]

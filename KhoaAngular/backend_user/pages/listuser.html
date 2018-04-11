@@ -1,0 +1,71 @@
+<div class="card">
+  <div class="card-header no-bg b-a-0">
+    Hoverable rows
+  </div>
+  <div class="card-block">
+
+    <p>Danh sách</p>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>
+              ID
+            </th>
+            <th>
+              Username
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              Level
+            </th>
+            <th>
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="user in userData" ng-init="user.show='true'">
+          <!-- Xem dữ liệu -->
+          <tr ng-show="user.show">
+            <th scope="row">
+              {{ user.id }}
+            </th>
+            <td>
+              {{ user.username }}
+            </td>
+            <td>
+              {{ user.email }}
+            </td>
+            <td>
+              {{ user.level }}
+            </td>
+            <td>
+              <button ng-click="toggleShow(user)" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></button>
+            </td>
+          </tr>
+          <!-- Sửa dữ liệu -->
+          <tr ng-show="!user.show">
+            <th scope="row">
+              {{ user.id }}
+              <input ng-model="user.id" type="hidden" class="form-control">
+            </th>
+            <td>
+              <input ng-model="user.username" type="text" class="form-control">
+            </td>
+            <td>
+              <input ng-model="user.email" type="text" class="form-control">
+            </td>
+            <td>
+              <input ng-model="user.level" type="text" class="form-control">
+            </td>
+            <td>
+              <button ng-click="updateUserData(user)" class="btn btn-success btn-sm"><i class="fa fa-save"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
